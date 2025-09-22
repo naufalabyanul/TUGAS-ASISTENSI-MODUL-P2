@@ -1,0 +1,44 @@
+Penjelasan Program Pengurutan 
+
+1. Deklarasi & Inisialisasi Array
+
+   
+   int data[10] = {4, 8, 19, 3, 22, 11, 2, 17, 31, 10};
+   int n = 10, i, j, temp;
+   
+
+   * `data[10]` adalah array yang menyimpan 10 bilangan.
+   * `n` menyimpan jumlah elemen array (10).
+   * `i` dan `j` sebagai penghitung (loop counter).
+   * `temp` sebagai variabel sementara untuk menukar nilai.
+
+2. Proses Bubble Sort
+
+   for (i = 0; i < n - 1; i++) {
+       for (j = 0; j < n - i - 1; j++) {
+           if (data[j] > data[j + 1]) {
+               temp = data[j];
+               data[j] = data[j + 1];
+               data[j + 1] = temp;
+           }
+       }
+   }
+   
+
+   * Outer loop (`i`): Menentukan berapa kali proses pengurutan diulang.
+     * Setelah setiap iterasi, elemen terbesar akan “tergeser” ke posisi paling akhir.
+   * Inner loop (`j`): Mengecek pasangan elemen yang bersebelahan.
+     * `if (data[j] > data[j + 1])` → Jika elemen kiri lebih besar, **tukar posisi** menggunakan variabel `temp`.
+   * Setelah `n-1` iterasi, seluruh array tersusun ascending (kecil → besar).
+
+3. Menampilkan Hasil
+
+   printf("Bilangan setelah diurutkan: ");
+   for (i = 0; i < n; i++) {
+       printf("%d ", data[i]);
+   }
+   printf("\n");
+   
+
+---
+
