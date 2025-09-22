@@ -1,0 +1,40 @@
+Alur Program
+
+1. Deklarasi variabel
+
+   int a, b;
+
+   * `a` dan `b` adalah bilangan bulat (integer) yang akan dimasukkan pengguna.
+
+2. Input dari pengguna
+
+   printf("Masukkan dua angka (pisahkan dengan spasi): ");
+   scanf("%d %d", &a, &b);
+
+   * `printf` menampilkan pesan ke layar.
+   * `scanf("%d %d", &a, &b)` membaca dua angka yang dipisahkan spasi dan menyimpannya ke variabel `a` dan `b`.
+   * Tanda `&` artinya “alamat variabel”, agar `scanf` bisa menulis nilai ke dalam variabel.
+
+3. Operasi Aritmatika Dasar
+
+   printf("Penjumlahan  : %d + %d = %d\n", a, b, a + b);
+   printf("Pengurangan  : %d - %d = %d\n", a, b, a - b);
+   printf("Perkalian    : %d * %d = %d\n", a, b, a * b)
+
+   * Menggunakan **operator** `+`, `-`, `*` untuk menghitung hasil masing-masing operasi.
+   * Format `%d` menampilkan hasil sebagai bilangan bulat.
+
+4. Pembagian & Modulo dengan Pengecekan
+
+   if (b != 0) {
+       printf("Pembagian    : %d / %d = %.2f\n", a, b, (float)a / b);
+       printf("Modulo       : %d %% %d = %d\n", a, b, a % b);
+   } else {
+       printf("Pembagian    : Tidak dapat dibagi dengan nol!\n");
+       printf("Modulo       : Tidak dapat dihitung karena pembagi nol!\n");
+   }
+
+   * `if (b != 0)` memastikan pembagi tidak sama dengan nol agar tidak terjadi error.
+   * `(float)a / b` mengubah `a` menjadi **tipe pecahan (float)** agar pembagian menampilkan desimal.
+   * `a % b` menghasilkan sisa pembagian (**modulo**).
+   * `%%` digunakan untuk menampilkan simbol `%` karena `%` sendiri adalah karakter khusus format string.
